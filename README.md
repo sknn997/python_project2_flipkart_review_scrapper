@@ -1,0 +1,1 @@
+# python_project2_flipkart_review_scrapper
