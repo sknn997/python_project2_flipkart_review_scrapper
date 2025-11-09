@@ -1,0 +1,110 @@
+/* ====== GLOBAL STYLING ====== */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #4facfe, #00f2fe, #38ef7d, #11998e);
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ====== CENTERED CONTAINER ====== */
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* ====== GLASSMORPHISM CARD ====== */
+.glass-card {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 50px 40px;
+  width: 90%;
+  max-width: 450px;
+  text-align: center;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 45px rgba(31, 38, 135, 0.47);
+}
+
+/* ====== TITLE ====== */
+.glass-card h1 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+/* ====== INPUT FIELD ====== */
+input[type="text"] {
+  width: 100%;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  outline: none;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+input[type="text"]:focus {
+  box-shadow: 0 0 15px rgba(79, 172, 254, 0.8);
+  transform: scale(1.02);
+}
+
+/* ====== BUTTON ====== */
+.search-btn {
+  margin-top: 20px;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+  background: linear-gradient(90deg, #43e97b, #38f9d7);
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(79, 172, 254, 0.8);
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 480px) {
+  .glass-card {
+    padding: 35px 25px;
+  }
+
+  .glass-card h1 {
+    font-size: 1.6rem;
+  }
+
+  input[type="text"] {
+    font-size: 0.9rem;
+  }
+
+  .search-btn {
+    font-size: 0.9rem;
+  }
+}
